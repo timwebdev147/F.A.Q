@@ -1,0 +1,97 @@
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	height: 100vh;
+	/* overflow: hidden; */
+	margin: 0;
+	background-color: #f0f0f0;
+}
+h1{
+	text-transform: capitalize;
+}
+.fab{
+	font-size: 40px;
+	color: rgba(0, 80, 255, 0.5);
+}
+/* .faq-container{
+	background-color: black;
+} */
+.fa-car-battery{
+	font-size: 40px;
+	color: rgba(0, 80, 255, 0.5);
+}
+.faq{
+	background-color: transparent;
+	border: 1px solid #9fa4a8;
+	border-radius: 10px;
+	margin: 20px 0;
+	padding: 10px 30px;
+	position: relative;
+	transition: 0.3s ease;
+	overflow: hidden;
+}
+.faq.active{
+	background-color: #fff;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1), 0px 3px 6px rgba(0, 0, 0, 0.1);
+	padding: 20px 30px;
+}
+.faq.active:before, .faq.active:after{
+	content: '\f075';
+	font-family: 'font awesome 5 free';
+	font-size: 7rem;
+	position: absolute;
+	z-index: 0;
+	color: black;
+	opacity: 0.3;
+	top: -2;
+	left: 20;
+}
+.faq.active:after{
+	top: 20;
+	left: 50;
+	color: yellow;
+	transform: rotatey(180deg);
+}
+.faq-text::before{
+	content: 'ans:';
+	font-weight: 600;
+}
+.faq-title{
+	margin-right: 35px;
+}
+.faq-text{
+	display: none;
+	margin: 30px 0 0;
+}
+.faq.active .faq-text{
+	display: block;
+}
+.faq-toggle {
+	border: 0;
+	border-radius: 50%;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+}
+.faq-toggle .fa-times{
+	display: none;
+}
+.faq.active .faq-toggle .fa-times{
+	display: block;
+	color: white;
+}
+.faq.active .faq-toggle .fa-chevron-down{
+	display: none;
+}
+.faq.active .faq-toggle{
+	background-color: gray;
+}
